@@ -3,3 +3,125 @@ html {
   color: #6feff9;
   font-family: "Ubuntu Mono", monospace;
 }
+
+.dashboard-map,
+.dashboard-controls-top,
+.dashboard-stats {
+  border-bottom: 1px dotted #89d4e5;
+}
+
+h2 {
+  border-left: 1px dotted #89d4e5;
+  border-bottom: 1px dotted #89d4e5;
+  filter: drop-shadow(0 0 4px #89d4e5);
+}
+
+.warning {
+  transform-origin: 680px 1343px;
+  animation: pulse 2s linear alternate infinite;
+  fill: #f62e52;
+}
+
+.star {
+  fill: #ffd31d;
+}
+
+.action-btn {
+  color: #89d4e5;
+}
+
+.action-btn .action-icon {
+  filter: drop-shadow(0 0 5px #89d4e5);
+}
+
+.action-btn .action-icon:hover {
+  filter: drop-shadow(0 0 5px #fff);
+}
+
+.bar-1 {
+  animation: flicker 200ms linear infinite alternate;
+}
+
+.bar-2 {
+  animation: flicker 150ms linear infinite alternate;
+}
+
+.bar-3 {
+  animation: flicker 200ms linear infinite alternate;
+}
+
+.bar-4 {
+  animation: flicker 150ms linear infinite alternate;
+}
+
+.bar {
+  transform-origin: 10px 755px;
+  transform: scaleY(0);
+  animation: grow 1s .5s linear forwards;
+}
+
+@keyframes grow {
+
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+
+}
+
+@keyframes pulse {
+
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(.8);
+    opacity: .7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+@keyframes flicker {
+
+  0% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  .dashboard-stats {
+    border-bottom: none;
+    border-right: 1px dotted #89d4e5;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .dashboard-stats {
+    border-right: none;
+    border-bottom: 1px dotted #89d4e5;
+  }
+
+  .dashboard-map {
+    border-bottom: none;
+    border-right: 1px dotted #89d4e5;
+  }
+
+}
